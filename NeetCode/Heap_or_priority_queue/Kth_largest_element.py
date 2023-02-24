@@ -5,6 +5,8 @@ class KthLargest:
     def __init__(self, k: int, nums: list[int]):
         self.p = nums
         self.k = k
+        # heapq - smallest element is at the root
+        # heapq._heapify_max(self.p)
         heapq.heapify(self.p)
         while len(self.p) > k:
             heapq.heappop(self.p)
